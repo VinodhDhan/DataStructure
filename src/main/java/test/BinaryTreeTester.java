@@ -1,6 +1,6 @@
 package test;
 
-import BinaryTree.BinarySearchTree;
+import BinarySearchTree.BinarySearchTree;
 
 public class BinaryTreeTester {
     public static void main(String[] args) {

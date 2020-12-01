@@ -1,4 +1,4 @@
-package BinaryTree;
+package BinarySearchTree;
 public class Node<T>{
    T value;
   Node<T> left;

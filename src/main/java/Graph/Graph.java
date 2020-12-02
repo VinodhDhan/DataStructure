@@ -143,4 +143,27 @@ public class Graph<T> {
         }
         return new ArrayList<>(visited);
     }
+
+    public LinkedList<T> topologicalSort(){
+        LinkedList<T> result = new LinkedList<T>();
+        Set<T> visited = new HashSet<>();
+        for(Node node : graph.keySet()){
+            if(visited.contains(node.value)) continue;
+            else{
+                topologicalSortRecursive(node, result,visited);
+            }
+        }
+        return result;
+    }
+
+    private void topologicalSortRecursive(Node node, LinkedList<T> result, Set<T> visited) {
+        visited.add((T)node.value);
+        for(Node childNodes : graph.get(node)){
+            if(visited.contains(childNodes.value)) continue;
+            else{
+                topologicalSortRecursive(childNodes,result,visited);
+            }
+        }
+        result.addFirst((T)node.value);
+    }
 }

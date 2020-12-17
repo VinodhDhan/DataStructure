@@ -29,6 +29,7 @@ public class CircularQueue<T> {
     public void enqueue(T item){
         if (isFull()) {
             System.out.println("Circular Queue is full. Element cannot be added");
+            System.exit(1);
         }
         else {
             rear = (rear + 1) % circularQueueElements.length;
@@ -49,6 +50,7 @@ public class CircularQueue<T> {
         T deQueuedElement = null;
         if (isEmpty()) {
             System.out.println("Circular Queue is empty. Element cannot be retrieved");
+            System.exit(1);
         }
         else {
             deQueuedElement = circularQueueElements[front];

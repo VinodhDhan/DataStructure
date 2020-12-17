@@ -1,7 +1,8 @@
 package sort;
 
 import java.util.Arrays;
-
+// Time complexity - Best Case - O(nlogn) Worst Case - O(n*n)
+// Space complexity - Best Case - O(logn)
 public class QuickSort {
 
     public static void main(String[] args) {
